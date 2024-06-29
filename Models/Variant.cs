@@ -15,7 +15,7 @@ namespace MVCECommerce.Models
         [Required]
         public double Price { get; set; }
 
-        public string LinkImg { get; set; }
+        public string? LinkImg { get; set; }
 
         [Required]
         public virtual Article Article { get; set; }
@@ -26,17 +26,17 @@ namespace MVCECommerce.Models
         public virtual Size? Size { get; set; }
         [ForeignKey(nameof(Size))]
         [AllowNull]
-        public int SizeId { get; set; }
+        public int? SizeId { get; set; }
 
         public virtual Color? Color { get; set; }
         [ForeignKey(nameof(Color))]
         [AllowNull]
-        public int ColorId { get; set; }
+        public int? ColorId { get; set; }
 
         public virtual Brand? Brand { get; set; }
         [ForeignKey(nameof(Brand))]
         [AllowNull]
-        public int BrandId { get; set; }
+        public int? BrandId { get; set; }
 
         public ICollection<CartArticle> CartArticle { get; set; }
     }

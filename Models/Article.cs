@@ -8,8 +8,8 @@ namespace MVCECommerce.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public string Description { get; set; }
-        public string LinkImg { get; set; }
+        public string? Description { get; set; }
+        public string? LinkImg { get; set; }
         public ICollection<Variant> Variant { get; set; }
     }
 }

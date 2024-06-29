@@ -66,3 +66,4 @@ C:\Users\lucaa\source\repos\MVCECommerce\MVCECommerce\bin\Debug\net6.0\runtimes\
 C:\Users\lucaa\source\repos\MVCECommerce\MVCECommerce\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\lucaa\source\repos\MVCECommerce\MVCECommerce\obj\Debug\net6.0\MVCECommerce.csproj.AssemblyReference.cache
 C:\Users\lucaa\source\repos\MVCECommerce\MVCECommerce\obj\Debug\net6.0\MVCEComm.167D4FD4.Up2Date
+C:\Users\lucaa\source\repos\MVCECommerce\MVCECommerce\obj\Debug\net6.0\MVCECommerce.sourcelink.json

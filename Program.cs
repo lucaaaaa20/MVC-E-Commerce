@@ -1,10 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using MVCECommerce.Data;
+using MVCECommerce.Interfaces;
+using MVCECommerce.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

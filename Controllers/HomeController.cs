@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCECommerce.Data;
+using MVCECommerce.Interfaces;
 using MVCECommerce.Models;
 using System.Diagnostics;
 
@@ -6,16 +8,18 @@ namespace MVCECommerce.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _context;
+        private readonly IArticleRepository _articleRepository;
+        public HomeController(ApplicationDbContext context, IArticleRepository articleRepository)
         {
-            _logger = logger;
+            _context = context;
+            _articleRepository = articleRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            IEnumerable<Article> articles = await _articleRepository.GetAll();
+            return View(articles);
         }
 
         public IActionResult Privacy()

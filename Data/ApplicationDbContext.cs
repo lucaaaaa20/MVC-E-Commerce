@@ -22,16 +22,5 @@ namespace MVCECommerce.Data
         public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<Size> Size { get; set; }
         public DbSet<Variant> Variant { get; set; }
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-
-        //    // Configurazione della relazione uno-a-molti tra User e Order
-        //    modelBuilder.Entity<Order>()
-        //        .HasOne(o => o.User)
-        //        .WithMany(u => u.Orders)
-        //        .HasForeignKey(o => o.UserId);
-        //}
     }
 }
