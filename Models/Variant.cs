@@ -10,10 +10,19 @@ namespace MVCECommerce.Models
         public int Id { get; set; }
 
         [Required]
+        public string Name { get; set; }
+
+        [Required]
         public int Stock {  get; set; }
 
         [Required]
         public double Price { get; set; }
+
+        [Required]
+        public bool Discount { get; set; }
+
+        [Required]
+        public double DiscountPrice { get; set; }
 
         public string? LinkImg { get; set; }
 
@@ -39,5 +48,8 @@ namespace MVCECommerce.Models
         public int? BrandId { get; set; }
 
         public ICollection<CartArticle> CartArticle { get; set; }
+
+        [StringLength(2)]
+        public int Priority { get; set; }
     }
 }

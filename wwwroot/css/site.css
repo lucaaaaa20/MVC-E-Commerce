@@ -16,3 +16,29 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.img-variant {
+    width: 20%;
+    bottom: 82px;
+}
+
+.container-img-variant {
+    position: relative;
+    background-color: white;
+    height: 0px;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition-duration: 0.45s;
+}
+
+.max-height-container {
+    height: 20%;
+    padding: 10px;
+    transition: 0.5s;
+    transform: translateY(-100%);
+}
+
+.main-image-article {
+    height: 412px;
+    overflow: hidden;
+}

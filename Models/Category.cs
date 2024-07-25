@@ -14,5 +14,7 @@ namespace MVCECommerce.Models
         public virtual Group? Group { get; set; }
         [ForeignKey(nameof(Group))]
         public int? GroupId { get; set; }
+
+        public ICollection<Article> Article { get; set; }
     }
 }
